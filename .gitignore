@@ -1,0 +1,4 @@
+NLQ-Agent/
+__pycache__/
+.env
+venv/
