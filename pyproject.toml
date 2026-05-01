@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nlq-agent"
+version = "0.1.0"
+description = "A Natural Language to MongoDB AI Agent using Flask, Streamlit, and Groq."
+authors = [
+    { name = "shuvakant6623" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "flask>=3.0.0",
+    "streamlit>=1.30.0",
+    "requests>=2.31.0",
+    "groq>=0.4.0",
+    "pymongo>=4.6.0",
+    "python-dotenv>=1.0.0"
+]
+
+[project.optional-dependencies]
+# This allows you to install testing tools separately
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+# Tells PyTest where to look for tests automatically
+testpaths = ["tests"]
+python_files = "test_*.py"
